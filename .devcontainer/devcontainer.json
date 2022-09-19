@@ -20,8 +20,8 @@
 
 	// mount kaggle credentials and gitconfign (#TODO avoid hardcoded user)
 	"mounts": [
-		"source=/home/azureuser/.kaggle,target=/home/nonroot/.kaggle,type=bind,consistency=cached",
-		"source=/home/azureuser/.gitconfig,target=/home/nonroot/.gitconfig,type=bind,consistency=cached"
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.kaggle,target=/home/nonroot/.kaggle,type=bind,consistency=cached",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/nonroot/.gitconfig,type=bind,consistency=cached"
 	],
 
 	"remoteUser": "nonroot"
